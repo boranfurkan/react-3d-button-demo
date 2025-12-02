@@ -4,7 +4,9 @@ This is the official demo and documentation website for [react-3d-button](https:
 
 ## 🚀 Live Demo
 
-Visit the live demo at: http://localhost:3000 (when running locally)
+**[View Live Demo →](https://react-3d-button-demo.vercel.app/)**
+
+Or run locally: http://localhost:3000
 
 ## 📦 What's Inside
 
