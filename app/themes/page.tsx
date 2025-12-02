@@ -167,33 +167,6 @@ export default function ThemesPage() {
           ))}
         </div>
 
-        {/* Code Example */}
-        <div className="bg-white dark:bg-slate-800 rounded-2xl shadow-xl p-8 border border-slate-200 dark:border-slate-700 mb-12">
-          <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-4">
-            How to use {selectedTheme} theme
-          </h3>
-          <CodeBlock
-            code={`import { Button3D } from 'react-3d-button';
-import 'react-3d-button/styles';${
-              currentThemeClass
-                ? `\nimport 'react-3d-button/themes/${currentThemeClass.replace(
-                    'theme-',
-                    ''
-                  )}.css';`
-                : ''
-            }
-
-function App() {
-  return (
-    <Button3D type="primary">
-      Click Me!
-    </Button3D>
-  );
-}`}
-            language="typescript"
-          />
-        </div>
-
         {/* Live Preview */}
         <div
           className={`bg-white dark:bg-slate-800 rounded-2xl shadow-xl p-8 border border-slate-200 dark:border-slate-700 ${currentThemeClass}`}
@@ -254,6 +227,33 @@ function App() {
               </div>
             </div>
           </div>
+        </div>
+
+        {/* Code Example */}
+        <div className="bg-white dark:bg-slate-800 rounded-2xl shadow-xl p-8 border border-slate-200 dark:border-slate-700 mt-12">
+          <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-4">
+            How to use {selectedTheme} theme
+          </h3>
+          <CodeBlock
+            code={`import { Button3D } from 'react-3d-button';
+import 'react-3d-button/styles';${
+              currentThemeClass
+                ? `\nimport 'react-3d-button/themes/${currentThemeClass.replace(
+                    'theme-',
+                    ''
+                  )}.css';`
+                : ''
+            }
+
+function App() {
+  return (
+    <Button3D type="primary">
+      Click Me!
+    </Button3D>
+  );
+}`}
+            language="typescript"
+          />
         </div>
       </section>
 
