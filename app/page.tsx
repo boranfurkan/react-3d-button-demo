@@ -81,16 +81,11 @@ export default function Home() {
           </p>
 
           <div className="flex flex-wrap gap-4 justify-center mb-8">
-            <Button3D
-              type="primary"
-              size="large"
-              ripple
-              onPress={() => alert('Welcome! 👋')}
-            >
+            <Button3D type="primary" size="medium" ripple>
               Try Me!
             </Button3D>
             <Link href="/themes">
-              <Button3D type="secondary" size="large">
+              <Button3D type="secondary" size="medium">
                 Explore Themes
               </Button3D>
             </Link>
