@@ -1,36 +1,100 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# React 3D Button - Demo & Documentation
 
-## Getting Started
+This is the official demo and documentation website for [react-3d-button](https://www.npmjs.com/package/react-3d-button).
 
-First, run the development server:
+## 🚀 Live Demo
+
+Visit the live demo at: http://localhost:3000 (when running locally)
+
+## 📦 What's Inside
+
+- **Interactive Examples**: Try all button variants, sizes, and states
+- **Theme Showcase**: Preview all 5 pre-built themes (Ocean, Sunset, Forest, Pirate, Neon)
+- **Custom Theme Builder**: Live color picker to create your own theme
+- **Code Examples**: Copy-paste ready code snippets with syntax highlighting
+- **Feature Documentation**: Complete API reference and usage guides
+
+## 🛠️ Built With
+
+- **Next.js 15** - React framework with App Router
+- **React 19** - UI library
+- **TypeScript** - Type safety
+- **Tailwind CSS 4** - Styling
+- **react-3d-button** - The button component library
+- **react-syntax-highlighter** - Code syntax highlighting
+- **lucide-react** - Beautiful icons
+
+## 🏃‍♂️ Running Locally
 
 ```bash
+# Install dependencies
+npm install
+
+# Start development server
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+
+# Open http://localhost:3000
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 📁 Project Structure
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```
+react-3d-button-demo/
+├── app/
+│   ├── page.tsx          # Home page with examples
+│   ├── themes/
+│   │   └── page.tsx      # Theme showcase and customization
+│   ├── layout.tsx        # Root layout
+│   └── globals.css       # Global styles
+├── components/
+│   ├── CodeBlock.tsx     # Syntax highlighted code blocks
+│   └── FeatureCard.tsx   # Feature display cards
+└── public/               # Static assets
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 🎨 Features
 
-## Learn More
+### Interactive Examples
 
-To learn more about Next.js, take a look at the following resources:
+- All 9 button variants (primary, secondary, tertiary, success, error, warning, info, anchor, danger)
+- 3 sizes (small, medium, large)
+- Ripple effects, active states, disabled states
+- Counter and toggle examples
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Theme System
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- 5 pre-built themes ready to use
+- Live theme switcher to preview all themes
+- Interactive color picker for custom themes
+- Real-time CSS variable override demonstration
 
-## Deploy on Vercel
+### Code Examples
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- Syntax highlighted code blocks
+- One-click copy functionality
+- Examples for all use cases
+- Both CSS and inline style approaches
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 🔗 Links
+
+- **NPM Package**: https://www.npmjs.com/package/react-3d-button
+- **GitHub Repository**: https://github.com/boranfurkan/react-3d-button
+
+## 📝 License
+
+MIT - See [LICENSE](../react-3d-button/LICENSE)
+
+## 👨‍💻 Author
+
+**Furkan Boran**
+
+- GitHub: [@boranfurkan](https://github.com/boranfurkan)
+- NPM: [react-3d-button](https://www.npmjs.com/package/react-3d-button)
+
+## 🙏 Credits
+
+Inspired by [react-awesome-button](https://github.com/rcaferati/react-awesome-button) by Rafael Caferati.
+
+---
+
+Built with Next.js 15 and ❤️
