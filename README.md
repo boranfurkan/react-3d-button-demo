@@ -97,4 +97,4 @@ Inspired by [react-awesome-button](https://github.com/rcaferati/react-awesome-bu
 
 ---
 
-Built with Next.js 15 and ❤️
+Built with Next.js 15 and ❤️🤍
