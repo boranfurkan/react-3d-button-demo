@@ -1,0 +1,16 @@
+{
+  "name": "React 3D Button",
+  "short_name": "React 3D Button",
+  "description": "Beautiful 3D button component for React and Next.js",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#6366f1",
+  "icons": [
+    {
+      "src": "/favicon.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    }
+  ]
+}

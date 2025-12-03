@@ -6,6 +6,7 @@ import { useState } from 'react';
 import Link from 'next/link';
 import CodeBlock from '@/components/CodeBlock';
 import FeatureCard from '@/components/FeatureCard';
+import FAQSection from '@/components/FAQSection';
 import {
   Palette,
   Smartphone,
@@ -67,17 +68,21 @@ export default function Home() {
           <div className="inline-flex items-center gap-2 px-4 py-2 bg-blue-50 dark:bg-blue-950/30 border border-blue-200 dark:border-blue-900 rounded-full mb-6">
             <Sparkles className="w-4 h-4 text-blue-600 dark:text-blue-400" />
             <span className="text-sm font-medium text-blue-600 dark:text-blue-400">
-              Version 1.0 - Now Available
+              Version 1.0.4 - Now Available
             </span>
           </div>
 
-          <h2 className="text-4xl md:text-6xl font-bold text-slate-900 dark:text-white mb-4 bg-clip-text">
-            Tactile 3D Buttons
+          <h1 className="text-4xl md:text-6xl font-bold text-slate-900 dark:text-white mb-4 bg-clip-text">
+            React 3D Button Component
+          </h1>
+          <h2 className="text-2xl md:text-3xl font-semibold text-slate-700 dark:text-slate-300 mb-4">
+            Beautiful Tactile 3D Buttons for React & Next.js
           </h2>
           <p className="text-xl text-slate-600 dark:text-slate-400 mb-8 max-w-2xl mx-auto">
-            A beautiful React component with realistic 3D press effects,
-            multiple themes, and easy customization. Works seamlessly with
-            Next.js 13+.
+            A beautiful, customizable 3D button component for React with
+            realistic press effects, 5 pre-built themes, TypeScript support, and
+            mobile optimization. Perfect for modern web applications and Next.js
+            13+ projects.
           </p>
 
           <div className="flex flex-wrap gap-4 justify-center mb-8">
@@ -278,7 +283,7 @@ function App() {
                 >
                   -
                 </Button3D>
-                <span className="text-2xl font-bold text-slate-900 dark:text-white min-w-[3rem] text-center">
+                <span className="text-2xl font-bold text-slate-900 dark:text-white min-w-12 text-center">
                   {count}
                 </span>
                 <Button3D
@@ -301,7 +306,7 @@ function App() {
                   Disabled
                 </Button3D>
                 <Button3D type="secondary" disabled>
-                  Can't Click
+                  Can&apos;t Click
                 </Button3D>
               </div>
             </div>
@@ -347,6 +352,83 @@ function App() {
           />
         </div>
       </section>
+      {/* FAQ Section */}
+      <FAQSection />
+
+      {/* SEO Content Section */}
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div className="bg-white dark:bg-slate-800 rounded-2xl shadow-xl p-8 border border-slate-200 dark:border-slate-700">
+          <h2 className="text-3xl font-bold text-slate-900 dark:text-white mb-6">
+            About React 3D Button
+          </h2>
+          <div className="prose prose-slate dark:prose-invert max-w-none">
+            <p className="text-slate-600 dark:text-slate-400 mb-4">
+              <strong>React 3D Button</strong> is a powerful, easy-to-use button
+              component library for React and Next.js applications. It provides
+              beautiful 3D press effects, realistic animations, and a delightful
+              user experience that makes your web applications stand out.
+            </p>
+            <h3 className="text-xl font-semibold text-slate-900 dark:text-white mb-3">
+              Perfect for Modern React Applications
+            </h3>
+            <p className="text-slate-600 dark:text-slate-400 mb-4">
+              Whether you&apos;re building a landing page, SaaS dashboard,
+              e-commerce site, or any modern web application, React 3D Button
+              provides the interactive elements you need. With full TypeScript
+              support, mobile optimization, and Next.js 13+ compatibility, it
+              integrates seamlessly into your existing React projects.
+            </p>
+            <h3 className="text-xl font-semibold text-slate-900 dark:text-white mb-3">
+              Key Features for Developers
+            </h3>
+            <ul className="list-disc list-inside text-slate-600 dark:text-slate-400 space-y-2 mb-4">
+              <li>
+                <strong>9 Button Variants:</strong> Primary, Secondary,
+                Tertiary, Success, Error, Warning, Info, Anchor, and Danger
+              </li>
+              <li>
+                <strong>5 Pre-built Themes:</strong> Ocean, Sunset, Forest,
+                Pirate, and Neon - ready to use out of the box
+              </li>
+              <li>
+                <strong>TypeScript First:</strong> Full type definitions for
+                excellent IDE support and autocomplete
+              </li>
+              <li>
+                <strong>Mobile Optimized:</strong> Enhanced touch support with
+                fixed mobile interaction issues
+              </li>
+              <li>
+                <strong>Highly Customizable:</strong> Override CSS variables to
+                match your brand colors
+              </li>
+              <li>
+                <strong>Lightweight Package:</strong> Only ~24KB with zero
+                runtime dependencies
+              </li>
+              <li>
+                <strong>Next.js Ready:</strong> Works perfectly with Next.js 13+
+                App Router and Server Components
+              </li>
+              <li>
+                <strong>Accessible:</strong> Built with accessibility in mind,
+                supporting keyboard navigation
+              </li>
+            </ul>
+            <h3 className="text-xl font-semibold text-slate-900 dark:text-white mb-3">
+              Use Cases and Applications
+            </h3>
+            <p className="text-slate-600 dark:text-slate-400 mb-4">
+              React 3D Button is ideal for call-to-action buttons, form
+              submissions, navigation elements, interactive dashboards, gaming
+              interfaces, and any application where you want to provide tactile,
+              engaging user interactions. The realistic 3D press effect gives
+              users immediate visual feedback, improving the overall user
+              experience.
+            </p>
+          </div>
+        </div>
+      </section>
 
       {/* Footer */}
       <footer className="border-t border-slate-200 dark:border-slate-700 mt-20">
@@ -376,7 +458,7 @@ function App() {
                 </a>
               </p>
             </div>
-            <div className="flex gap-4">
+            <nav className="flex gap-4" aria-label="Footer navigation">
               <a
                 href="https://github.com/boranfurkan/react-3d-button"
                 target="_blank"
@@ -399,7 +481,7 @@ function App() {
               >
                 Themes
               </Link>
-            </div>
+            </nav>
           </div>
         </div>
       </footer>
