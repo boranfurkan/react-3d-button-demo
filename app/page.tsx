@@ -322,7 +322,7 @@ function App() {
                   active={toggleState1}
                   onChange={setToggleState1}
                 >
-                  <span className="w-20 inline-flex items-center gap-1 justify-center">
+                  <span className="w-20 flex items-center gap-1 justify-center">
                     {toggleState1 ? (
                       <>
                         <Check size={16} /> ON
@@ -340,7 +340,7 @@ function App() {
                   defaultActive={false}
                   onChange={(active) => setToggleState2(active)}
                 >
-                  <span className="w-20 inline-flex items-center gap-1 justify-center">
+                  <span className="w-28 flex items-center gap-1 justify-center">
                     {toggleState2 ? (
                       <>
                         <Check size={16} /> Active

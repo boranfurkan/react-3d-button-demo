@@ -85,7 +85,9 @@ export default function TogglePage() {
               toggle
               onChange={(active) => console.log('Toggle state:', active)}
             >
-              <span className="w-32 inline-block">Click to Toggle</span>
+              <span className="w-32 flex items-center justify-center">
+                Click to Toggle
+              </span>
             </Button3D>
 
             <Button3D
@@ -94,7 +96,9 @@ export default function TogglePage() {
               defaultActive={true}
               onChange={(active) => console.log('Success toggle:', active)}
             >
-              <span className="w-24 inline-block">Default ON</span>
+              <span className="w-24 flex items-center justify-center">
+                Default ON
+              </span>
             </Button3D>
 
             <Button3D
@@ -102,7 +106,9 @@ export default function TogglePage() {
               toggle
               onChange={(active) => console.log('Error toggle:', active)}
             >
-              <span className="w-24 inline-block">Error Toggle</span>
+              <span className="w-24 flex items-center justify-center">
+                Error Toggle
+              </span>
             </Button3D>
           </div>
 
@@ -145,7 +151,7 @@ export default function TogglePage() {
               active={controlledToggle}
               onChange={setControlledToggle}
             >
-              <span className="w-16 inline-flex items-center gap-1">
+              <span className="w-16 flex items-center gap-1 justify-center">
                 {controlledToggle ? (
                   <>
                     <Check size={14} /> ON
@@ -203,7 +209,7 @@ export default function TogglePage() {
                 onChange={setNotifications}
                 size="small"
               >
-                <span className="w-14 inline-flex items-center justify-center gap-1">
+                <span className="w-14 flex items-center justify-center gap-1">
                   {notifications ? (
                     <>
                       <Check size={14} /> ON
@@ -233,7 +239,7 @@ export default function TogglePage() {
                 onChange={setDarkMode}
                 size="small"
               >
-                <span className="w-14 inline-flex items-center justify-center gap-1">
+                <span className="w-14 flex items-center justify-center gap-1">
                   {darkMode ? (
                     <>
                       <Moon size={14} /> ON
@@ -263,7 +269,7 @@ export default function TogglePage() {
                 onChange={setWifi}
                 size="small"
               >
-                <span className="w-14 inline-flex items-center justify-center gap-1">
+                <span className="w-14 flex items-center justify-center gap-1">
                   {wifi ? (
                     <>
                       <Wifi size={14} /> ON
@@ -290,7 +296,7 @@ export default function TogglePage() {
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
             <div className="text-center">
               <Button3D type="primary" toggle defaultActive>
-                <span className="w-20 inline-flex items-center gap-1">
+                <span className="w-20 flex items-center gap-1 justify-center">
                   <Check size={14} /> Primary
                 </span>
               </Button3D>
@@ -298,7 +304,7 @@ export default function TogglePage() {
             </div>
             <div className="text-center">
               <Button3D type="secondary" toggle defaultActive>
-                <span className="w-24 inline-flex items-center gap-1">
+                <span className="w-24 flex items-center gap-1 justify-center">
                   <Check size={14} /> Secondary
                 </span>
               </Button3D>
@@ -306,7 +312,7 @@ export default function TogglePage() {
             </div>
             <div className="text-center">
               <Button3D type="tertiary" toggle defaultActive>
-                <span className="w-20 inline-flex items-center gap-1">
+                <span className="w-20 flex items-center gap-1 justify-center">
                   <Check size={14} /> Tertiary
                 </span>
               </Button3D>
@@ -314,7 +320,7 @@ export default function TogglePage() {
             </div>
             <div className="text-center">
               <Button3D type="success" toggle defaultActive>
-                <span className="w-20 inline-flex items-center gap-1">
+                <span className="w-20 flex items-center gap-1 justify-center">
                   <Check size={14} /> Success
                 </span>
               </Button3D>
@@ -322,7 +328,7 @@ export default function TogglePage() {
             </div>
             <div className="text-center">
               <Button3D type="error" toggle defaultActive>
-                <span className="w-16 inline-flex items-center gap-1">
+                <span className="w-16 flex items-center gap-1 justify-center">
                   <Check size={14} /> Error
                 </span>
               </Button3D>
@@ -330,7 +336,7 @@ export default function TogglePage() {
             </div>
             <div className="text-center">
               <Button3D type="warning" toggle defaultActive>
-                <span className="w-20 inline-flex items-center gap-1">
+                <span className="w-20 flex items-center gap-1 justify-center">
                   <Check size={14} /> Warning
                 </span>
               </Button3D>
@@ -338,7 +344,7 @@ export default function TogglePage() {
             </div>
             <div className="text-center">
               <Button3D type="info" toggle defaultActive>
-                <span className="w-16 inline-flex items-center gap-1">
+                <span className="w-16 flex items-center gap-1 justify-center">
                   <Check size={14} /> Info
                 </span>
               </Button3D>
@@ -346,7 +352,7 @@ export default function TogglePage() {
             </div>
             <div className="text-center">
               <Button3D type="danger" toggle defaultActive>
-                <span className="w-20 inline-flex items-center gap-1">
+                <span className="w-20 flex items-center gap-1 justify-center">
                   <Check size={14} /> Danger
                 </span>
               </Button3D>
