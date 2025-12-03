@@ -14,11 +14,14 @@ import {
   Code,
   Package,
   Sparkles,
+  Check,
+  Circle,
 } from 'lucide-react';
 
 export default function Home() {
-  const [activeButton, setActiveButton] = useState(false);
   const [count, setCount] = useState(0);
+  const [toggleState1, setToggleState1] = useState(false);
+  const [toggleState2, setToggleState2] = useState(false);
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-slate-100 dark:from-slate-900 dark:to-slate-800">
@@ -34,7 +37,19 @@ export default function Home() {
                 Beautiful 3D buttons for React & Next.js
               </p>
             </div>
-            <div className="flex gap-3">
+            <nav className="flex gap-3" aria-label="Main navigation">
+              <Link
+                href="/themes"
+                className="px-4 py-2 text-sm font-medium text-slate-700 hover:text-slate-900 dark:text-slate-300 dark:hover:text-white transition-colors"
+              >
+                Themes
+              </Link>
+              <Link
+                href="/toggle"
+                className="px-4 py-2 text-sm font-medium text-slate-700 hover:text-slate-900 dark:text-slate-300 dark:hover:text-white transition-colors"
+              >
+                Toggle
+              </Link>
               <a
                 href="https://github.com/boranfurkan/react-3d-button"
                 target="_blank"
@@ -51,7 +66,7 @@ export default function Home() {
               >
                 NPM
               </a>
-            </div>
+            </nav>
           </div>
         </div>
       </header>
@@ -68,7 +83,7 @@ export default function Home() {
           <div className="inline-flex items-center gap-2 px-4 py-2 bg-blue-50 dark:bg-blue-950/30 border border-blue-200 dark:border-blue-900 rounded-full mb-6">
             <Sparkles className="w-4 h-4 text-blue-600 dark:text-blue-400" />
             <span className="text-sm font-medium text-blue-600 dark:text-blue-400">
-              Version 1.0.4 - Now Available
+              Version 1.0.4 - Toggle Mode Available
             </span>
           </div>
 
@@ -80,9 +95,9 @@ export default function Home() {
           </h2>
           <p className="text-xl text-slate-600 dark:text-slate-400 mb-8 max-w-2xl mx-auto">
             A beautiful, customizable 3D button component for React with
-            realistic press effects, 5 pre-built themes, TypeScript support, and
-            mobile optimization. Perfect for modern web applications and Next.js
-            13+ projects.
+            realistic press effects, toggle mode, 5 pre-built themes, TypeScript
+            support, and mobile optimization. Perfect for modern web
+            applications and Next.js 13+ projects.
           </p>
 
           <div className="flex flex-wrap gap-4 justify-center mb-8">
@@ -92,6 +107,11 @@ export default function Home() {
             <Link href="/themes">
               <Button3D type="secondary" size="medium">
                 Explore Themes
+              </Button3D>
+            </Link>
+            <Link href="/toggle">
+              <Button3D type="info" size="medium">
+                Toggle Examples
               </Button3D>
             </Link>
           </div>
@@ -161,44 +181,63 @@ function App() {
         </div>
       </section>
 
-      {/* Button Types */}
+      {/* Button Variants */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="bg-white dark:bg-slate-800 rounded-2xl shadow-xl p-8 border border-slate-200 dark:border-slate-700">
           <h3 className="text-2xl font-bold text-slate-900 dark:text-white mb-6">
             Button Variants
           </h3>
+          <p className="text-slate-600 dark:text-slate-400 mb-6">
+            Choose from 8 semantic button variants to match your UI needs.
+          </p>
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
             <div className="text-center">
               <Button3D type="primary">Primary</Button3D>
-              <p className="text-xs text-slate-500 mt-2">Primary</p>
+              <p className="text-xs text-slate-500 dark:text-slate-400 mt-2">
+                Primary
+              </p>
             </div>
             <div className="text-center">
               <Button3D type="secondary">Secondary</Button3D>
-              <p className="text-xs text-slate-500 mt-2">Secondary</p>
+              <p className="text-xs text-slate-500 dark:text-slate-400 mt-2">
+                Secondary
+              </p>
             </div>
             <div className="text-center">
               <Button3D type="tertiary">Tertiary</Button3D>
-              <p className="text-xs text-slate-500 mt-2">Tertiary</p>
+              <p className="text-xs text-slate-500 dark:text-slate-400 mt-2">
+                Tertiary
+              </p>
             </div>
             <div className="text-center">
               <Button3D type="success">Success</Button3D>
-              <p className="text-xs text-slate-500 mt-2">Success</p>
+              <p className="text-xs text-slate-500 dark:text-slate-400 mt-2">
+                Success
+              </p>
             </div>
             <div className="text-center">
               <Button3D type="error">Error</Button3D>
-              <p className="text-xs text-slate-500 mt-2">Error</p>
+              <p className="text-xs text-slate-500 dark:text-slate-400 mt-2">
+                Error
+              </p>
             </div>
             <div className="text-center">
               <Button3D type="warning">Warning</Button3D>
-              <p className="text-xs text-slate-500 mt-2">Warning</p>
+              <p className="text-xs text-slate-500 dark:text-slate-400 mt-2">
+                Warning
+              </p>
             </div>
             <div className="text-center">
               <Button3D type="info">Info</Button3D>
-              <p className="text-xs text-slate-500 mt-2">Info</p>
+              <p className="text-xs text-slate-500 dark:text-slate-400 mt-2">
+                Info
+              </p>
             </div>
             <div className="text-center">
               <Button3D type="danger">Danger</Button3D>
-              <p className="text-xs text-slate-500 mt-2">Danger</p>
+              <p className="text-xs text-slate-500 dark:text-slate-400 mt-2">
+                Danger
+              </p>
             </div>
           </div>
         </div>
@@ -210,24 +249,33 @@ function App() {
           <h3 className="text-2xl font-bold text-slate-900 dark:text-white mb-6">
             Button Sizes
           </h3>
+          <p className="text-slate-600 dark:text-slate-400 mb-6">
+            Three predefined sizes to fit your design system.
+          </p>
           <div className="flex flex-wrap items-center gap-6">
             <div className="text-center">
               <Button3D type="primary" size="small">
                 Small
               </Button3D>
-              <p className="text-xs text-slate-500 mt-2">Small (32px)</p>
+              <p className="text-xs text-slate-500 dark:text-slate-400 mt-2">
+                Small (32px)
+              </p>
             </div>
             <div className="text-center">
               <Button3D type="primary" size="medium">
                 Medium
               </Button3D>
-              <p className="text-xs text-slate-500 mt-2">Medium (48px)</p>
+              <p className="text-xs text-slate-500 dark:text-slate-400 mt-2">
+                Medium (48px)
+              </p>
             </div>
             <div className="text-center">
               <Button3D type="primary" size="large">
                 Large
               </Button3D>
-              <p className="text-xs text-slate-500 mt-2">Large (64px)</p>
+              <p className="text-xs text-slate-500 dark:text-slate-400 mt-2">
+                Large (64px)
+              </p>
             </div>
           </div>
         </div>
@@ -239,13 +287,19 @@ function App() {
           <h3 className="text-2xl font-bold text-slate-900 dark:text-white mb-6">
             Interactive Features
           </h3>
+          <p className="text-slate-600 dark:text-slate-400 mb-8">
+            Explore the rich interactive capabilities with ripple effects,
+            active states, and toggles.
+          </p>
 
           <div className="grid md:grid-cols-2 gap-8">
-            {/* Ripple Effect */}
             <div>
               <h4 className="font-semibold text-slate-900 dark:text-white mb-3">
                 Ripple Effect
               </h4>
+              <p className="text-sm text-slate-600 dark:text-slate-400 mb-3">
+                Add visual feedback with built-in ripple animations.
+              </p>
               <div className="flex gap-3">
                 <Button3D type="primary" ripple>
                   With Ripple
@@ -254,26 +308,68 @@ function App() {
               </div>
             </div>
 
-            {/* Active State */}
             <div>
               <h4 className="font-semibold text-slate-900 dark:text-white mb-3">
-                Active State Toggle
+                Toggle Mode
               </h4>
-              <Button3D
-                type="info"
-                active={activeButton}
-                onPress={() => setActiveButton(!activeButton)}
-                ripple
-              >
-                {activeButton ? '✓ Active' : 'Click to Activate'}
-              </Button3D>
+              <p className="text-sm text-slate-600 dark:text-slate-400 mb-3">
+                Enable toggle mode for persistent pressed states.
+              </p>
+              <div className="flex gap-3">
+                <Button3D
+                  type="success"
+                  toggle
+                  active={toggleState1}
+                  onChange={setToggleState1}
+                >
+                  <span className="w-20 inline-flex items-center gap-1 justify-center">
+                    {toggleState1 ? (
+                      <>
+                        <Check size={16} /> ON
+                      </>
+                    ) : (
+                      <>
+                        <Circle size={16} /> OFF
+                      </>
+                    )}
+                  </span>
+                </Button3D>
+                <Button3D
+                  type="warning"
+                  toggle
+                  defaultActive={false}
+                  onChange={(active) => setToggleState2(active)}
+                >
+                  <span className="w-20 inline-flex items-center gap-1 justify-center">
+                    {toggleState2 ? (
+                      <>
+                        <Check size={16} /> Active
+                      </>
+                    ) : (
+                      <>
+                        <Circle size={16} /> Inactive
+                      </>
+                    )}
+                  </span>
+                </Button3D>
+              </div>
+              <p className="text-xs text-slate-500 dark:text-slate-400 mt-2">
+                <Link
+                  href="/toggle"
+                  className="text-blue-600 dark:text-blue-400 hover:underline"
+                >
+                  View more toggle examples →
+                </Link>
+              </p>
             </div>
 
-            {/* Counter */}
             <div>
               <h4 className="font-semibold text-slate-900 dark:text-white mb-3">
                 Counter Example
               </h4>
+              <p className="text-sm text-slate-600 dark:text-slate-400 mb-3">
+                Build interactive counters with disabled state logic.
+              </p>
               <div className="flex items-center gap-3">
                 <Button3D
                   type="error"
@@ -296,11 +392,13 @@ function App() {
               </div>
             </div>
 
-            {/* Disabled */}
             <div>
               <h4 className="font-semibold text-slate-900 dark:text-white mb-3">
                 Disabled State
               </h4>
+              <p className="text-sm text-slate-600 dark:text-slate-400 mb-3">
+                Prevent interaction with the disabled prop.
+              </p>
               <div className="flex gap-3">
                 <Button3D type="primary" disabled>
                   Disabled
@@ -480,6 +578,12 @@ function App() {
                 className="text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white transition-colors"
               >
                 Themes
+              </Link>
+              <Link
+                href="/toggle"
+                className="text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white transition-colors"
+              >
+                Toggle
               </Link>
             </nav>
           </div>

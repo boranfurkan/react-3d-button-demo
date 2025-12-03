@@ -6,9 +6,9 @@ import { vscDarkPlus } from 'react-syntax-highlighter/dist/esm/styles/prism';
 import { Check, Copy } from 'lucide-react';
 
 interface CodeBlockProps {
-  code: string;
-  language?: string;
-  showLineNumbers?: boolean;
+  readonly code: string;
+  readonly language?: string;
+  readonly showLineNumbers?: boolean;
 }
 
 export default function CodeBlock({

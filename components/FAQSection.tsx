@@ -1,6 +1,9 @@
-import React from 'react';
+interface FAQ {
+  readonly question: string;
+  readonly answer: string;
+}
 
-const faqs = [
+const faqs: readonly FAQ[] = [
   {
     question: 'What is React 3D Button?',
     answer:

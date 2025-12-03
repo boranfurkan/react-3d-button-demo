@@ -99,12 +99,18 @@ export default function ThemesPage() {
                 Explore Themes
               </p>
             </div>
-            <div className="flex gap-3">
+            <nav className="flex gap-3" aria-label="Main navigation">
               <Link
                 href="/"
                 className="px-4 py-2 text-sm font-medium text-slate-700 hover:text-slate-900 dark:text-slate-300 dark:hover:text-white transition-colors"
               >
                 Home
+              </Link>
+              <Link
+                href="/toggle"
+                className="px-4 py-2 text-sm font-medium text-slate-700 hover:text-slate-900 dark:text-slate-300 dark:hover:text-white transition-colors"
+              >
+                Toggle
               </Link>
               <a
                 href="https://github.com/boranfurkan/react-3d-button"
@@ -114,7 +120,7 @@ export default function ThemesPage() {
               >
                 GitHub
               </a>
-            </div>
+            </nav>
           </div>
         </div>
       </header>
@@ -453,12 +459,18 @@ function App() {
                 </a>
               </p>
             </div>
-            <div className="flex gap-4">
+            <nav className="flex gap-4" aria-label="Footer navigation">
               <Link
                 href="/"
                 className="text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white transition-colors"
               >
                 Home
+              </Link>
+              <Link
+                href="/toggle"
+                className="text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white transition-colors"
+              >
+                Toggle
               </Link>
               <a
                 href="https://github.com/boranfurkan/react-3d-button"
@@ -476,7 +488,7 @@ function App() {
               >
                 NPM
               </a>
-            </div>
+            </nav>
           </div>
         </div>
       </footer>

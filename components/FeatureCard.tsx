@@ -1,7 +1,7 @@
 interface FeatureCardProps {
-  icon: React.ReactNode;
-  title: string;
-  description: string;
+  readonly icon: React.ReactNode;
+  readonly title: string;
+  readonly description: string;
 }
 
 export default function FeatureCard({

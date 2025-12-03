@@ -15,7 +15,7 @@ const geistMono = Geist_Mono({
 const siteUrl = 'https://react-3d-button-demo.vercel.app';
 const siteName = 'React 3D Button';
 const siteDescription =
-  'Beautiful 3D button component for React and Next.js with realistic press effects, 5 pre-built themes, TypeScript support, and mobile optimization. Easy to customize with CSS variables. Perfect for modern web applications.';
+  'Beautiful 3D button component for React and Next.js with realistic press effects, toggle mode, 5 pre-built themes, TypeScript support, and mobile optimization. Easy to customize with CSS variables. Perfect for modern web applications.';
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
@@ -45,6 +45,11 @@ export const metadata: Metadata = {
     'react typescript button',
     'button themes react',
     'customizable button react',
+    'react toggle button',
+    '3d toggle switch',
+    'toggle button component',
+    'react switch component',
+    'animated toggle react',
   ],
   authors: [{ name: 'Furkan Boran', url: 'https://github.com/boranfurkan' }],
   creator: 'Furkan Boran',
@@ -104,7 +109,7 @@ export default function RootLayout({
     '@type': 'SoftwareApplication',
     name: 'React 3D Button',
     description:
-      'Beautiful 3D button component for React and Next.js with realistic press effects, multiple themes, and TypeScript support',
+      'Beautiful 3D button component for React and Next.js with realistic press effects, toggle mode, multiple themes, and TypeScript support',
     url: 'https://react-3d-button-demo.vercel.app',
     applicationCategory: 'DeveloperApplication',
     operatingSystem: 'Any',

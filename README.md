@@ -1,6 +1,6 @@
 # React 3D Button - Demo & Documentation
 
-This is the official demo and documentation website for [react-3d-button](https://www.npmjs.com/package/react-3d-button).
+This is the official demo and documentation website for [react-3d-button](https://www.npmjs.com/package/react-3d-button) - a beautiful 3D button component with toggle mode for React and Next.js.
 
 ## 🚀 Live Demo
 
@@ -11,6 +11,7 @@ Or run locally: http://localhost:3000
 ## 📦 What's Inside
 
 - **Interactive Examples**: Try all button variants, sizes, and states
+- **Toggle Mode Showcase**: Interactive toggle/switch examples with controlled and uncontrolled modes
 - **Theme Showcase**: Preview all 5 pre-built themes (Ocean, Sunset, Forest, Pirate, Neon)
 - **Custom Theme Builder**: Live color picker to create your own theme
 - **Code Examples**: Copy-paste ready code snippets with syntax highlighting
@@ -44,13 +45,18 @@ npm run dev
 react-3d-button-demo/
 ├── app/
 │   ├── page.tsx          # Home page with examples
+│   ├── toggle/
+│   │   └── page.tsx      # Toggle mode examples and demos
 │   ├── themes/
 │   │   └── page.tsx      # Theme showcase and customization
-│   ├── layout.tsx        # Root layout
+│   ├── layout.tsx        # Root layout with SEO metadata
+│   ├── sitemap.ts        # Dynamic sitemap generation
+│   ├── robots.ts         # SEO robots configuration
 │   └── globals.css       # Global styles
 ├── components/
 │   ├── CodeBlock.tsx     # Syntax highlighted code blocks
-│   └── FeatureCard.tsx   # Feature display cards
+│   ├── FeatureCard.tsx   # Feature display cards
+│   └── FAQSection.tsx    # FAQ with structured data
 └── public/               # Static assets
 ```
 
@@ -61,7 +67,16 @@ react-3d-button-demo/
 - All 9 button variants (primary, secondary, tertiary, success, error, warning, info, anchor, danger)
 - 3 sizes (small, medium, large)
 - Ripple effects, active states, disabled states
-- Counter and toggle examples
+- Counter examples
+- **Toggle Mode**: Comprehensive toggle/switch examples with state management demos
+
+### Toggle Mode Features
+
+- Controlled and uncontrolled toggle modes
+- Settings panel examples (notifications, dark mode, wifi)
+- All button variants as toggles
+- Icon integration with Lucide React
+- Smooth animations without flash on mount
 
 ### Theme System
 
