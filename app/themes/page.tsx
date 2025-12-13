@@ -240,26 +240,87 @@ export default function ThemesPage() {
           <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-4">
             How to use {selectedTheme} theme
           </h3>
-          <CodeBlock
-            code={`import { Button3D } from 'react-3d-button';
-import 'react-3d-button/styles';${
-              currentThemeClass
-                ? `\nimport 'react-3d-button/themes/${currentThemeClass.replace(
-                    'theme-',
-                    ''
-                  )}.css';`
-                : ''
-            }
+
+          {currentThemeClass && (
+            <div className="mb-6 p-4 bg-blue-50 dark:bg-blue-950/30 border border-blue-200 dark:border-blue-800 rounded-lg">
+              <p className="text-sm text-blue-900 dark:text-blue-100 font-medium mb-2">
+                💡 Two ways to apply themes:
+              </p>
+              <ul className="text-sm text-blue-800 dark:text-blue-200 space-y-1 ml-4">
+                <li>
+                  <strong>Global:</strong> Use{' '}
+                  <code className="bg-blue-100 dark:bg-blue-900 px-1 rounded">
+                    .global.css
+                  </code>{' '}
+                  to apply to all buttons
+                </li>
+                <li>
+                  <strong>Scoped:</strong> Use{' '}
+                  <code className="bg-blue-100 dark:bg-blue-900 px-1 rounded">
+                    .css
+                  </code>{' '}
+                  with wrapper div for multi-theme apps
+                </li>
+              </ul>
+            </div>
+          )}
+
+          <div className="space-y-4">
+            {currentThemeClass && (
+              <>
+                <div>
+                  <h4 className="text-sm font-semibold text-slate-900 dark:text-white mb-2">
+                    Option 1: Global (entire app)
+                  </h4>
+                  <CodeBlock
+                    code={`import { Button3D } from 'react-3d-button';
+import 'react-3d-button/styles';
+import 'react-3d-button/themes/${currentThemeClass.replace(
+                      'theme-',
+                      ''
+                    )}.global.css';
+
+function App() {
+  return <Button3D type="primary">Click Me!</Button3D>;
+}`}
+                    language="typescript"
+                  />
+                </div>
+
+                <div>
+                  <h4 className="text-sm font-semibold text-slate-900 dark:text-white mb-2">
+                    Option 2: Scoped (with wrapper)
+                  </h4>
+                  <CodeBlock
+                    code={`import { Button3D } from 'react-3d-button';
+import 'react-3d-button/styles';
+import 'react-3d-button/themes/${currentThemeClass.replace('theme-', '')}.css';
 
 function App() {
   return (
-    <Button3D type="primary">
-      Click Me!
-    </Button3D>
+    <div className="${currentThemeClass}">
+      <Button3D type="primary">Click Me!</Button3D>
+    </div>
   );
 }`}
-            language="typescript"
-          />
+                    language="typescript"
+                  />
+                </div>
+              </>
+            )}
+
+            {!currentThemeClass && (
+              <CodeBlock
+                code={`import { Button3D } from 'react-3d-button';
+import 'react-3d-button/styles';
+
+function App() {
+  return <Button3D type="primary">Click Me!</Button3D>;
+}`}
+                language="typescript"
+              />
+            )}
+          </div>
         </div>
       </section>
 
