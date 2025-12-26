@@ -204,15 +204,24 @@ export default function ThemesPage() {
               <h4 className="font-semibold text-slate-900 dark:text-white mb-4">
                 Sizes
               </h4>
-              <div className="flex flex-wrap items-center gap-4">
-                <Button3D type="primary" size="small">
-                  Small
+              <div className="flex flex-wrap items-end gap-3">
+                <Button3D type="primary" size="xs">
+                  XS
                 </Button3D>
-                <Button3D type="primary" size="medium">
-                  Medium
+                <Button3D type="primary" size="sm">
+                  SM
                 </Button3D>
-                <Button3D type="primary" size="large">
-                  Large
+                <Button3D type="primary" size="md">
+                  MD
+                </Button3D>
+                <Button3D type="primary" size="lg">
+                  LG
+                </Button3D>
+                <Button3D type="primary" size="xl">
+                  XL
+                </Button3D>
+                <Button3D type="primary" size="2xl">
+                  2XL
                 </Button3D>
               </div>
             </div>

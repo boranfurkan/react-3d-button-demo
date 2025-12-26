@@ -83,7 +83,7 @@ export default function Home() {
           <div className="inline-flex items-center gap-2 px-4 py-2 bg-blue-50 dark:bg-blue-950/30 border border-blue-200 dark:border-blue-900 rounded-full mb-6">
             <Sparkles className="w-4 h-4 text-blue-600 dark:text-blue-400" />
             <span className="text-sm font-medium text-blue-600 dark:text-blue-400">
-              Version 1.0.4 - Toggle Mode Available
+              Version 1.3.0 - New Sizing, Loading & More!
             </span>
           </div>
 
@@ -95,22 +95,22 @@ export default function Home() {
           </h2>
           <p className="text-xl text-slate-600 dark:text-slate-400 mb-8 max-w-2xl mx-auto">
             A beautiful, customizable 3D button component for React with
-            realistic press effects, toggle mode, 5 pre-built themes, TypeScript
-            support, and mobile optimization. Perfect for modern web
-            applications and Next.js 13+ projects.
+            realistic press effects, toggle mode, 5 pre-built themes, 6 size
+            options, loading states, and full TypeScript support. Perfect for
+            modern web applications and Next.js 13+ projects.
           </p>
 
           <div className="flex flex-wrap gap-4 justify-center mb-8">
-            <Button3D type="primary" size="medium" ripple>
+            <Button3D type="primary" size="md" ripple>
               Try Me!
             </Button3D>
             <Link href="/themes">
-              <Button3D type="secondary" size="medium">
+              <Button3D type="secondary" size="md">
                 Explore Themes
               </Button3D>
             </Link>
             <Link href="/toggle">
-              <Button3D type="info" size="medium">
+              <Button3D type="info" size="md">
                 Toggle Examples
               </Button3D>
             </Link>
@@ -123,15 +123,15 @@ export default function Home() {
             </div>
             <div className="flex items-center gap-2">
               <span className="w-2 h-2 bg-blue-500 rounded-full"></span>
-              TypeScript
+              Full TypeScript JSDoc
             </div>
             <div className="flex items-center gap-2">
-              <span className="w-2 h-2 bg-purple-500 rounded-full"></span>5
-              Themes Included
+              <span className="w-2 h-2 bg-purple-500 rounded-full"></span>6 Size
+              Options
             </div>
             <div className="flex items-center gap-2">
               <span className="w-2 h-2 bg-orange-500 rounded-full"></span>
-              ~24KB Package
+              Loading States
             </div>
           </div>
         </div>
@@ -250,32 +250,216 @@ function App() {
             Button Sizes
           </h3>
           <p className="text-slate-600 dark:text-slate-400 mb-6">
-            Three predefined sizes to fit your design system.
+            Six granular size options to fit any design system. Legacy sizes
+            (small, medium, large) are still supported.
           </p>
-          <div className="flex flex-wrap items-center gap-6">
+          <div className="flex flex-wrap items-end gap-4">
             <div className="text-center">
-              <Button3D type="primary" size="small">
+              <Button3D type="primary" size="xs">
+                XS
+              </Button3D>
+              <p className="text-xs text-slate-500 dark:text-slate-400 mt-2">
+                xs (24px)
+              </p>
+            </div>
+            <div className="text-center">
+              <Button3D type="primary" size="sm">
                 Small
               </Button3D>
               <p className="text-xs text-slate-500 dark:text-slate-400 mt-2">
-                Small (32px)
+                sm (32px)
               </p>
             </div>
             <div className="text-center">
-              <Button3D type="primary" size="medium">
+              <Button3D type="primary" size="md">
                 Medium
               </Button3D>
               <p className="text-xs text-slate-500 dark:text-slate-400 mt-2">
-                Medium (48px)
+                md (40px)
               </p>
             </div>
             <div className="text-center">
-              <Button3D type="primary" size="large">
+              <Button3D type="primary" size="lg">
                 Large
               </Button3D>
               <p className="text-xs text-slate-500 dark:text-slate-400 mt-2">
-                Large (64px)
+                lg (48px)
               </p>
+            </div>
+            <div className="text-center">
+              <Button3D type="primary" size="xl">
+                XL
+              </Button3D>
+              <p className="text-xs text-slate-500 dark:text-slate-400 mt-2">
+                xl (56px)
+              </p>
+            </div>
+            <div className="text-center">
+              <Button3D type="primary" size="2xl">
+                2XL
+              </Button3D>
+              <p className="text-xs text-slate-500 dark:text-slate-400 mt-2">
+                2xl (64px)
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Border Radius */}
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div className="bg-white dark:bg-slate-800 rounded-2xl shadow-xl p-8 border border-slate-200 dark:border-slate-700">
+          <h3 className="text-2xl font-bold text-slate-900 dark:text-white mb-6">
+            Border Radius Variants
+          </h3>
+          <p className="text-slate-600 dark:text-slate-400 mb-6">
+            From sharp corners to pill-shaped buttons with the rounded prop.
+          </p>
+          <div className="flex flex-wrap items-center gap-4">
+            <div className="text-center">
+              <Button3D type="secondary" rounded="none">
+                None
+              </Button3D>
+              <p className="text-xs text-slate-500 dark:text-slate-400 mt-2">
+                none
+              </p>
+            </div>
+            <div className="text-center">
+              <Button3D type="secondary" rounded="sm">
+                Small
+              </Button3D>
+              <p className="text-xs text-slate-500 dark:text-slate-400 mt-2">
+                sm
+              </p>
+            </div>
+            <div className="text-center">
+              <Button3D type="secondary" rounded="md">
+                Medium
+              </Button3D>
+              <p className="text-xs text-slate-500 dark:text-slate-400 mt-2">
+                md (default)
+              </p>
+            </div>
+            <div className="text-center">
+              <Button3D type="secondary" rounded="lg">
+                Large
+              </Button3D>
+              <p className="text-xs text-slate-500 dark:text-slate-400 mt-2">
+                lg
+              </p>
+            </div>
+            <div className="text-center">
+              <Button3D type="secondary" rounded="xl">
+                XL
+              </Button3D>
+              <p className="text-xs text-slate-500 dark:text-slate-400 mt-2">
+                xl
+              </p>
+            </div>
+            <div className="text-center">
+              <Button3D type="secondary" rounded="full">
+                Pill Shape
+              </Button3D>
+              <p className="text-xs text-slate-500 dark:text-slate-400 mt-2">
+                full
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* New Features: Full Width, Loading, Icon Only */}
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div className="bg-white dark:bg-slate-800 rounded-2xl shadow-xl p-8 border border-slate-200 dark:border-slate-700">
+          <h3 className="text-2xl font-bold text-slate-900 dark:text-white mb-6">
+            New Features
+          </h3>
+
+          <div className="grid md:grid-cols-2 gap-8">
+            <div>
+              <h4 className="font-semibold text-slate-900 dark:text-white mb-3">
+                Full Width
+              </h4>
+              <p className="text-sm text-slate-600 dark:text-slate-400 mb-3">
+                Make buttons span the full container width.
+              </p>
+              <div className="max-w-xs">
+                <Button3D type="primary" fullWidth>
+                  Full Width Button
+                </Button3D>
+              </div>
+            </div>
+
+            <div>
+              <h4 className="font-semibold text-slate-900 dark:text-white mb-3">
+                Loading State
+              </h4>
+              <p className="text-sm text-slate-600 dark:text-slate-400 mb-3">
+                Built-in loading spinner with optional text.
+              </p>
+              <div className="flex gap-3">
+                <Button3D type="primary" loading>
+                  Loading
+                </Button3D>
+                <Button3D type="success" loading loadingText="Saving...">
+                  Save
+                </Button3D>
+              </div>
+            </div>
+
+            <div>
+              <h4 className="font-semibold text-slate-900 dark:text-white mb-3">
+                Icon Only Buttons
+              </h4>
+              <p className="text-sm text-slate-600 dark:text-slate-400 mb-3">
+                Square buttons perfect for icons.
+              </p>
+              <div className="flex items-center gap-3">
+                <Button3D type="primary" iconOnly size="sm">
+                  <svg
+                    width="14"
+                    height="14"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                  >
+                    <path d="M12 5v14M5 12h14" />
+                  </svg>
+                </Button3D>
+                <Button3D type="primary" iconOnly size="md">
+                  <svg
+                    width="16"
+                    height="16"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                  >
+                    <path d="M12 5v14M5 12h14" />
+                  </svg>
+                </Button3D>
+                <Button3D type="success" iconOnly rounded="full" size="lg">
+                  <Check size={20} />
+                </Button3D>
+              </div>
+            </div>
+
+            <div>
+              <h4 className="font-semibold text-slate-900 dark:text-white mb-3">
+                Combining Features
+              </h4>
+              <p className="text-sm text-slate-600 dark:text-slate-400 mb-3">
+                Mix size, rounded, and other props.
+              </p>
+              <div className="flex gap-3">
+                <Button3D type="info" size="lg" rounded="full">
+                  Large Pill
+                </Button3D>
+                <Button3D type="warning" size="sm" rounded="none">
+                  Small Sharp
+                </Button3D>
+              </div>
             </div>
           </div>
         </div>
@@ -373,7 +557,7 @@ function App() {
               <div className="flex items-center gap-3">
                 <Button3D
                   type="error"
-                  size="small"
+                  size="sm"
                   onPress={() => setCount(Math.max(0, count - 1))}
                   disabled={count <= 0}
                 >
@@ -384,7 +568,7 @@ function App() {
                 </span>
                 <Button3D
                   type="success"
-                  size="small"
+                  size="sm"
                   onPress={() => setCount(count + 1)}
                 >
                   +

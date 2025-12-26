@@ -207,7 +207,7 @@ export default function TogglePage() {
                 toggle
                 active={notifications}
                 onChange={setNotifications}
-                size="small"
+                size="sm"
               >
                 <span className="w-14 flex items-center justify-center gap-1">
                   {notifications ? (
@@ -237,7 +237,7 @@ export default function TogglePage() {
                 toggle
                 active={darkMode}
                 onChange={setDarkMode}
-                size="small"
+                size="sm"
               >
                 <span className="w-14 flex items-center justify-center gap-1">
                   {darkMode ? (
@@ -267,7 +267,7 @@ export default function TogglePage() {
                 toggle
                 active={wifi}
                 onChange={setWifi}
-                size="small"
+                size="sm"
               >
                 <span className="w-14 flex items-center justify-center gap-1">
                   {wifi ? (
